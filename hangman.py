@@ -1,4 +1,3 @@
-import re, os
 from sprites import HANGMAN_SPRITES
 
 # Variables
@@ -7,8 +6,6 @@ word = ''
 max_tries = len(HANGMAN_SPRITES) - 1
 fails = 0
 raw_input = ''
-letter = ''
-valid_letters = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
 clues = []
 
 # Funciones
