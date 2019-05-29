@@ -3,13 +3,13 @@ from sprites import HANGMAN_SPRITES
 
 # Variables
 
+word = ''
 max_tries = len(HANGMAN_SPRITES) - 1
 fails = 0
 raw_input = ''
 letter = ''
 valid_letters = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
-word = list('palabra'.upper())
-clues = list('_' * len(word))
+clues = []
 
 # Funciones
 
@@ -49,6 +49,10 @@ def clear_screen():
   print(chr(27) + "[2J")
 
 # Logica del juego
+
+word = list(input('Escribe la palabra a descubrir: ').upper())
+clues = list('_' * len(word))
+clear_screen()
 
 while(not game_completed() and no_more_tries()):
   clear_screen()
